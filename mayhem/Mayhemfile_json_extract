@@ -1,0 +1,10 @@
+project: savantenvs/velox
+target: json_extract
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/json_extract/testsuite
+cmds:
+  - cmd: /mayhem/_build/bin/json_extract
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/mayhem/json_extract/json_extract.dict

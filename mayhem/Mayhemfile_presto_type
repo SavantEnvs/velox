@@ -1,0 +1,8 @@
+project: savantenvs/velox
+target: presto_type
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/presto_type/testsuite
+cmds:
+  - cmd: /mayhem/_build/bin/presto_type @@
+    timeout: 5

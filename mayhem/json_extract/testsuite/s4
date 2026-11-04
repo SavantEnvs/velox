@@ -1,0 +1,2 @@
+$.store.book[0].title
+{"store":{"book":[{"title":"A \u00e9","price":8.95}]}}

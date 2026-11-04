@@ -1,0 +1,10 @@
+project: savantenvs/velox
+target: timestamp_parse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/timestamp_parse/testsuite
+cmds:
+  - cmd: /mayhem/_build/bin/timestamp_parse
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/mayhem/timestamp_parse/timestamp_parse.dict

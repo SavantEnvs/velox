@@ -1,0 +1,10 @@
+project: savantenvs/velox
+target: hive_type
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/hive_type/testsuite
+cmds:
+  - cmd: /mayhem/_build/bin/hive_type
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/mayhem/hive_type/hive_type.dict

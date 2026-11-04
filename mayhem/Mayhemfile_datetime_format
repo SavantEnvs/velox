@@ -1,0 +1,10 @@
+project: savantenvs/velox
+target: datetime_format
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/datetime_format/testsuite
+cmds:
+  - cmd: /mayhem/_build/bin/datetime_format
+    libfuzzer: true
+    timeout: 5
+    dictionary: /mayhem/mayhem/datetime_format/datetime_format.dict

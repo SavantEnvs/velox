@@ -1,0 +1,1 @@
+map<int,struct<x:float,y:varchar(20)>>
